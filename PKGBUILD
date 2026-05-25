@@ -3,7 +3,7 @@
 
 pkgname=sonic-workspace-addons
 pkgver=6.6.5
-pkgrel=1
+pkgrel=2
 pkgdesc='All kind of addons to improve your SonicDE experience'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-workspace-addons'
@@ -54,7 +54,7 @@ conflicts=(kdeplasma-addons)
 replaces=(kdeplasma-addons)
 provides=(kdeplasma-addons)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('2d568f4a1523e914d10c433837c888f8c34e11954d10467cf9b09ee752298a4d')
+sha256sums=('7bf8026d691f706954db7bc3ca2265972d048ea5eb2cae03e49f6e7b5beee9cf')
 
 build() {
   cmake -B build  -S $pkgname-$pkgver \
