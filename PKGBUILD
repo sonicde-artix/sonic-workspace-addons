@@ -1,14 +1,18 @@
 # Maintainer: callmetango
 # Contributor: artist <artist@artixlinux.org>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Antonio Rojas <arojas@archlinux.org>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-workspace-addons
 pkgver=6.6.5
-pkgrel=2
+pkgrel=3
 pkgdesc='All kind of addons to improve your SonicDE experience'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-workspace-addons'
 license=(LGPL-2.0-or-later)
-depends=(glibc
+depends=(gcc-libs
+         glibc
          icu
          kcmutils
          kconfig
@@ -17,6 +21,7 @@ depends=(glibc
          kholidays
          ki18n
          kiconthemes
+         kirigami-addons
          kitemmodels
          kjobwidgets
          knewstuff
@@ -27,7 +32,6 @@ depends=(glibc
          kunitconversion
          kwidgetsaddons
          kxmlgui
-         libgcc
          qt6-5compat
          qt6-base
          qt6-declarative
@@ -43,16 +47,15 @@ depends=(glibc
          sonic-win
          sonic-workspace
          sonnet)
-makedepends=(extra-cmake-modules
-             networkmanager-qt
-             qt6-webengine)
+makedepends=(networkmanager-qt
+             qt6-webengine
+             sonic-frameworks-cmake-modules)
 optdepends=('networkmanager-qt: POTD wallpaper'
             'qt6-webengine: dictionary and webbrowser applets'
             'quota-tools: disk quota applet')
-groups=(sonicde)
-conflicts=(kdeplasma-addons)
-replaces=(kdeplasma-addons)
 provides=(kdeplasma-addons)
+conflicts=(kdeplasma-addons)
+groups=(sonicde)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('7bf8026d691f706954db7bc3ca2265972d048ea5eb2cae03e49f6e7b5beee9cf')
 
